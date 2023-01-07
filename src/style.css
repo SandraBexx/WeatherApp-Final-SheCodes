@@ -1,13 +1,3 @@
-.weather-app {
-  max-width: 600px;
-  margin: 0 auto;
-  margin-top: 30px;
-  padding: 20px;
-  border: 1px solid green;
-  border-radius: 5px;
-  font-family: "Noto Sans", sans-serif;
-}
-
 h1 {
   color: #495464;
   font-size: 30px;
@@ -29,4 +19,32 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.weatherAppWrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.weather-app {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid green;
+  border-radius: 5px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.temperatureIcon {
+  height: 50px;
+  width: 50px;
+}
+
+#temperature {
+  font-size: 50px;
+  font-weight: 100;
+  line-height: 28px;
+}
+
+.units {
+  position: relative;
 }
