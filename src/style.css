@@ -30,13 +30,28 @@ footer {
   color: #bbbfca;
 }
 
-.weather-app {
+.lightTheme {
   max-width: 600px;
   margin: 0 auto;
   margin-top: 30px;
   padding: 20px;
   border: 1px solid #495464;
   border-radius: 8px;
+  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+.darkTheme {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #495464;
+  border-radius: 8px;
+  background: radial-gradient(
+    666px at 0.4% 48%,
+    rgb(202, 204, 227) 0%,
+    rgb(89, 89, 99) 97.5%
+  );
 }
 
 #search-form {

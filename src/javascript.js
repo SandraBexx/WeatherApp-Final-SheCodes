@@ -42,6 +42,18 @@ function formatDay(timestamp) {
   return days[day];
 }
 
+function setThemePreference() {
+  let date = new Date();
+
+  let currentHour = date.getHours();
+
+  if (currentHour >= 19 || currentHour <= 6) {
+    weatherAppLight.classList.remove("lightTheme");
+  } else {
+    weatherAppDark.classList.remove("darkTheme");
+  }
+}
+
 function displayForecast(response) {
   let forecast = response.data.daily;
 
@@ -170,3 +182,4 @@ let currentLocation = document.querySelector("#locationButton");
 currentLocation.addEventListener("click", displayCurrentLocation);
 
 search("Madrid");
+setThemePreference();

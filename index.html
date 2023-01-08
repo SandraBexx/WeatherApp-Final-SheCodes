@@ -25,72 +25,77 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <form id="search-form">
-          <div class="row">
-            <div class="col-9">
-              <input
-                type="search"
-                placeholder="Enter a city..."
-                class="form-control search-input"
-                id="cityInput"
-                autocomplete="off"
-              />
-            </div>
-            <div class="col-3 p-0">
-              <input
-                type="submit"
-                value="search"
-                class="btn btn-primary w-100"
-              />
-            </div>
-          </div>
-        </form>
-        <h1><span id="searchedCity"> City </span></h1>
-        <h2 id="currentDate">Sunday, August 30th</h2>
-        <div class="row">
-          <div class="col-6">
-            <div class="firstRow">
-              <div class="d-flex weather-temperature">
-                <img
-                  src="#"
-                  alt="sun"
-                  class="temperatureIcon"
-                  id="weatherIcon"
+      <div id="weatherAppLight" class="lightTheme">
+        <div id="weatherAppDark" class="darkTheme">
+          <form id="search-form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Enter a city..."
+                  class="form-control search-input"
+                  id="cityInput"
+                  autocomplete="off"
                 />
-
-                <strong id="currentTemperature">12</strong>
-                <span class="units">
-                  <a href="" id="celsiusLink" class="active">°C</a>
-                  /
-                  <a href="" id="fahrenheitLink">°F</a>
-                </span>
+              </div>
+              <div class="col-3 p-0">
+                <input
+                  type="submit"
+                  value="search"
+                  class="btn btn-primary w-100"
+                />
               </div>
             </div>
+          </form>
+          <h1><span id="searchedCity"> City </span></h1>
+          <h2 id="currentDate">Sunday, August 30th</h2>
+          <div class="row">
+            <div class="col-6">
+              <div class="firstRow">
+                <div class="d-flex weather-temperature">
+                  <img
+                    src="#"
+                    alt="sun"
+                    class="temperatureIcon"
+                    id="weatherIcon"
+                  />
+
+                  <strong id="currentTemperature">12</strong>
+                  <span class="units">
+                    <a href="" id="celsiusLink" class="active">°C</a>
+                    /
+                    <a href="" id="fahrenheitLink">°F</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul class="furtherInformation">
+                <li id="description" class="weatherDescription">clear</li>
+                <li class="rainIcon">
+                  💧 <span id="rainPossibility">50</span> %
+                </li>
+                <li>
+                  <img
+                    src="img/windEmoij.png"
+                    alt="wind Icon"
+                    class="windIcon"
+                  />
+                  <span id="windSpeed">50</span> km/h
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="col-6">
-            <ul class="furtherInformation">
-              <li id="description" class="weatherDescription">clear</li>
-              <li class="rainIcon">
-                💧 <span id="rainPossibility">50</span> %
-              </li>
-              <li>
-                <img src="img/windEmoij.png" alt="wind Icon" class="windIcon" />
-                <span id="windSpeed">50</span> km/h
-              </li>
-            </ul>
-          </div>
+          <div class="weather-forecast" id="forecast"></div>
+          <input
+            type="submit"
+            value="current Location"
+            class="btn btn-primary"
+            id="locationButton"
+          />
         </div>
-        <div class="weather-forecast" id="forecast"></div>
-        <input
-          type="submit"
-          value="current Location"
-          class="btn btn-primary"
-          id="locationButton"
-        />
       </div>
     </div>
-
     <footer>
       <small>
         <a
