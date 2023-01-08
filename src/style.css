@@ -15,7 +15,7 @@ h2 {
   font-weight: 100;
   line-height: 28px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 ul {
@@ -86,7 +86,7 @@ footer {
 
 .firstRow {
   margin-top: 15px;
-
+  margin-left: 20px;
   text-align: center;
 }
 
@@ -111,4 +111,11 @@ footer {
   background-color: #eac7c7;
   color: #495464;
   border: #495464;
+}
+
+.weather-forecast {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  opacity: 0.8;
 }
