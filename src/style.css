@@ -84,21 +84,18 @@ footer {
   text-decoration: none;
 }
 
-.furtherInformation {
-  padding-left: 90px;
-}
-
 .firstRow {
   margin-top: 15px;
-  margin-left: 30px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.furtherInformation {
+  text-align: center;
 }
 
 .weatherDescription:first-letter {
   text-transform: capitalize;
-}
-
-.rainIcon {
-  padding-left: 3px;
 }
 
 .windIcon {
