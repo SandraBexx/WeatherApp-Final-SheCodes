@@ -1,7 +1,5 @@
 let date = new Date();
 
-console.log(date);
-
 let days = [
   "Sunday",
   "Monday",
@@ -36,7 +34,6 @@ let dateOfTheDay = document.querySelector("#currentDate");
 dateOfTheDay.innerHTML = `${currentDay}, ${currentMonth} ${currentDate}th`;
 
 function displayWeatherData(response) {
-  console.log(response);
   let cityElement = document.querySelector("#searchedCity");
   let temperatureElement = document.querySelector("#currentTemperature");
   let descriptionElement = document.querySelector("#description");
@@ -87,6 +84,21 @@ function displayCelsiusTemperature(event) {
   temperatureElement.innerHTML = celsiusTemperature;
 }
 
+function getCoordinates(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+
+  let apiKey = "3ea3b1bcf6tod7e43390a734fd5a0186";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apiKey}`;
+
+  axios.get(apiUrl).then(displayWeatherData);
+}
+
+function displayCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(getCoordinates);
+}
+
 let celsiusTemperature = null;
 
 let searchForm = document.querySelector("#search-form");
@@ -98,4 +110,7 @@ fahrenheitUnit.addEventListener("click", displayFahrenheitTemperature);
 let celsiusUnit = document.querySelector("#celsiusLink");
 celsiusUnit.addEventListener("click", displayCelsiusTemperature);
 
-search("Bamberg");
+let currentLocation = document.querySelector("#locationButton");
+currentLocation.addEventListener("click", displayCurrentLocation);
+
+search("Madrid");
