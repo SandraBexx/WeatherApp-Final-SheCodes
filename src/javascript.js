@@ -41,6 +41,8 @@ function displayWeatherData(response) {
   let windElement = document.querySelector("#windSpeed");
   let iconElement = document.querySelector("#weatherIcon");
 
+  displayForecast();
+
   celsiusTemperature = Math.round(response.data.temperature.current);
 
   cityElement.innerHTML = response.data.city;
@@ -97,6 +99,33 @@ function getCoordinates(position) {
 function displayCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(getCoordinates);
+}
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  forecastElement.innerHTML = "hello";
+
+  //let forecastHTML = `<div class="row">`;
+
+  //days.forEach(function (day) {
+  forecastHTML =
+    forecastHTML +
+    `<div class="col-2">
+              thu
+              <div>
+                <img
+                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/shower-rain-day.png"
+                  alt="shower-rain-day"
+                  width="36px"
+                />
+              </div>
+              18° 12°
+            </div>`;
+  //});
+
+  //forecastHTML = forecastElement + `</div>`;
+  //forecastElement.innerHTML = forecastHTML;
 }
 
 let celsiusTemperature = null;
