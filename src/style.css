@@ -65,5 +65,15 @@ footer {
 }
 
 .firstRow {
-  margin-left: 40px;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+.rainIcon {
+  padding-left: 3px;
+}
+
+.windIcon {
+  height: 16px;
+  width: 16px;
 }
