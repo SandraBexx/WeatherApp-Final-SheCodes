@@ -44,8 +44,10 @@ function displayWeatherData(response) {
   let windElement = document.querySelector("#windSpeed");
   let iconElement = document.querySelector("#weatherIcon");
 
+  celsiusTemperature = Math.round(response.data.temperature.current);
+
   cityElement.innerHTML = response.data.city;
-  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
+  temperatureElement.innerHTML = celsiusTemperature;
   descriptionElement.innerHTML = response.data.condition.description;
   rainElement.innerHTML = Math.round(response.data.temperature.humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
@@ -68,5 +70,28 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#currentTemperature");
+  let showFahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(showFahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#currentTemperature");
+  temperatureElement.innerHTML = celsiusTemperature;
+}
+
+let celsiusTemperature = null;
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
+
+let fahrenheitUnit = document.querySelector("#fahrenheit-link");
+fahrenheitUnit.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusUnit = document.querySelector("#celsius-link");
+celsiusUnit.addEventListener("click", displayCelsiusTemperature);
+
+search("Bamberg");

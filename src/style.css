@@ -41,7 +41,7 @@ footer {
 }
 
 #search-form {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .row {
@@ -60,10 +60,25 @@ footer {
   line-height: 28px;
   margin-top: 10px;
   margin-left: -10px;
+  margin-right: 5px;
 }
 
 .units {
   position: relative;
+}
+
+.units .active {
+  color: #495464;
+  text-decoration: none;
+  cursor: default;
+}
+
+.units .fahrenheit {
+  text-decoration: none;
+}
+
+.units:hover {
+  text-decoration: none;
 }
 
 .furtherInformation {
