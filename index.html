@@ -26,6 +26,24 @@
   <body>
     <div class="container">
       <div class="weather-app">
+        <form id="search-form">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Enter a city..."
+                class="form-control search-input"
+              />
+            </div>
+            <div class="col-3 p-0">
+              <input
+                type="submit"
+                value="search"
+                class="btn btn-primary w-100"
+              />
+            </div>
+          </div>
+        </form>
         <h1><span id="searchedCity"> City </span></h1>
         <h2 id="currentDate">Sunday, August 30th</h2>
         <div class="row">
