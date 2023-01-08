@@ -72,6 +72,8 @@ function handleSubmit(event) {
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let temperatureElement = document.querySelector("#currentTemperature");
   let showFahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(showFahrenheitTemperature);
@@ -79,6 +81,8 @@ function displayFahrenheitTemperature(event) {
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
   let temperatureElement = document.querySelector("#currentTemperature");
   temperatureElement.innerHTML = celsiusTemperature;
 }
@@ -88,10 +92,10 @@ let celsiusTemperature = null;
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
-let fahrenheitUnit = document.querySelector("#fahrenheit-link");
+let fahrenheitUnit = document.querySelector("#fahrenheitLink");
 fahrenheitUnit.addEventListener("click", displayFahrenheitTemperature);
 
-let celsiusUnit = document.querySelector("#celsius-link");
+let celsiusUnit = document.querySelector("#celsiusLink");
 celsiusUnit.addEventListener("click", displayCelsiusTemperature);
 
 search("Bamberg");

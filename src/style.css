@@ -67,13 +67,16 @@ footer {
   position: relative;
 }
 
-.units .active {
+.active {
   color: #495464;
-  text-decoration: none;
   cursor: default;
 }
 
-.units .fahrenheit {
+#celsiusLink {
+  text-decoration: none;
+}
+
+#fahrenheitLink {
   text-decoration: none;
 }
 
