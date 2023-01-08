@@ -117,6 +117,14 @@ footer {
   width: 16px;
 }
 
+#rainPossibility {
+  font-weight: bold;
+}
+
+#windSpeed {
+  font-weight: bold;
+}
+
 #locationButton {
   font-size: 8px;
   height: 20px;
