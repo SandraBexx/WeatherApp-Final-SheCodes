@@ -1,3 +1,40 @@
+let date = new Date();
+
+console.log(date);
+
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+let currentDay = days[date.getDay()];
+
+let months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+let currentMonth = months[date.getMonth()];
+let currentDate = date.getDate();
+
+let dateOfTheDay = document.querySelector("#currentDate");
+dateOfTheDay.innerHTML = `${currentDay}, ${currentMonth} ${currentDate}th`;
+
 function displayWeatherData(response) {
   console.log(response);
   let cityElement = document.querySelector("#searchedCity");

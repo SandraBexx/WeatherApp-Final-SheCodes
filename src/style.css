@@ -69,6 +69,10 @@ footer {
   margin-left: 50px;
 }
 
+.weatherDescription {
+  text-transform: capitalize;
+}
+
 .rainIcon {
   padding-left: 3px;
 }
