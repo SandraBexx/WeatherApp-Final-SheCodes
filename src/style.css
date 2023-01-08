@@ -106,8 +106,12 @@ footer {
   width: 16px;
 }
 
-.locationButton {
-  font-size: large;
-  height: 16px;
-  width: 16px;
+#locationButton {
+  font-size: 8px;
+  height: 20px;
+  width: 120px;
+  padding: 3px;
+  background-color: #eac7c7;
+  color: #495464;
+  border: #495464;
 }
