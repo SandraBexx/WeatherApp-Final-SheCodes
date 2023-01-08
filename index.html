@@ -26,8 +26,8 @@
   <body>
     <div class="container">
       <div class="weather-app">
-        <h1>City</h1>
-        <h2>Sunday, August 30th</h2>
+        <h1 id="city">City</h1>
+        <h2 id="date">Sunday, August 30th</h2>
         <div class="row">
           <div class="col-6">
             <div class="firstRow">
@@ -36,17 +36,18 @@
                   src="https://cdn-icons-png.flaticon.com/512/169/169367.png"
                   alt="sun"
                   class="temperatureIcon"
+                  id="weatherIcon"
                 />
 
-                <strong id="temperature">12</strong>
+                <strong id="currentTemperature">12</strong>
                 <span class="units">°C / °F</span>
               </div>
             </div>
           </div>
           <div class="col-6">
             <ul class="furtherInformation">
-              <li>clear</li>
-              <li>💧 50%</li>
+              <li id="description">clear</li>
+              <li id="rainPossibility">💧 50%</li>
             </ul>
           </div>
         </div>
