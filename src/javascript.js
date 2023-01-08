@@ -104,15 +104,19 @@ function displayCurrentLocation(event) {
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  forecastElement.innerHTML = "hello";
-
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
   //let forecastHTML = `<div class="row">`;
+  // forecastHTML = `<div class="row">`;
 
-  //days.forEach(function (day) {
-  forecastHTML =
-    forecastHTML +
-    `<div class="col-2">
-              thu
+  forecastHTML = `<div class="row">`;
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+              <span id="forecastDay">
+              ${day}
+                </span>
               <div>
                 <img
                   src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/shower-rain-day.png"
@@ -120,12 +124,17 @@ function displayForecast() {
                   width="36px"
                 />
               </div>
-              18° 12°
+                <span id="forecastTemperatureMax">
+              18° 
+                </span>
+              <span id="forecastTemperatureMin">
+              12°
+              </span>
             </div>`;
-  //});
+  });
 
-  //forecastHTML = forecastElement + `</div>`;
-  //forecastElement.innerHTML = forecastHTML;
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 let celsiusTemperature = null;
