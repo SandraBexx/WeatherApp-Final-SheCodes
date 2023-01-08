@@ -38,15 +38,22 @@ dateOfTheDay.innerHTML = `${currentDay}, ${currentMonth} ${currentDate}th`;
 function displayWeatherData(response) {
   console.log(response);
   let cityElement = document.querySelector("#searchedCity");
-  cityElement.innerHTML = response.data.city;
   let temperatureElement = document.querySelector("#currentTemperature");
-  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   let descriptionElement = document.querySelector("#description");
-  descriptionElement.innerHTML = response.data.condition.description;
   let rainElement = document.querySelector("#rainPossibility");
-  rainElement.innerHTML = Math.round(response.data.temperature.humidity);
   let windElement = document.querySelector("#windSpeed");
+  let iconElement = document.querySelector("#weatherIcon");
+
+  cityElement.innerHTML = response.data.city;
+  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
+  descriptionElement.innerHTML = response.data.condition.description;
+  rainElement.innerHTML = Math.round(response.data.temperature.humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  iconElement.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  );
+  iconElement.setAttribute("alt", response.data.condition.description);
 }
 
 let city = "Lisbon";
