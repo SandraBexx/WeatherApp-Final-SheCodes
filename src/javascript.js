@@ -47,6 +47,8 @@ function setThemePreference() {
 
   let currentHour = date.getHours();
 
+  console.log(currentHour);
+
   if (currentHour >= 19 || currentHour <= 6) {
     weatherAppLight.classList.remove("lightTheme");
   } else {
