@@ -78,24 +78,13 @@ footer {
   margin-right: 5px;
 }
 
-.units {
+.unit {
   position: relative;
+  font-size: 15px;
+  font-weight: bold;
 }
 
-.active {
-  color: #495464;
-  cursor: default;
-}
-
-#celsiusLink {
-  text-decoration: none;
-}
-
-#fahrenheitLink {
-  text-decoration: none;
-}
-
-.units:hover {
+.unit:hover {
   text-decoration: none;
 }
 
